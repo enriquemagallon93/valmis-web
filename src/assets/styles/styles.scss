@@ -1,0 +1,27 @@
+@import 'theme/theme.scss';
+
+.display {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  &:before {
+    content: "valmis";
+    text-transform: uppercase;
+    display: flex;
+    @include getTheme(5);
+    line-height: 1.0;
+    letter-spacing: .2em;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+  }
+}
+
+.log {
+  flex-grow: 1;
+}

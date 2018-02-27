@@ -1,0 +1,64 @@
+@import 'palette.scss';
+@import './../fonts/faces.scss';
+
+@mixin getTheme($number: 0) {
+  $bg: $primary-bg;
+  $color: $primary-color;
+  @if $number == -5 {
+    $bg: $lightest-bg;
+    $color: $secondary-color;
+  }
+  @if $number == -4 {
+    $bg: $big-light-bg;
+    $color: $secondary-color;
+  }
+  @if $number == -3 {
+    $bg: $large-light-bg;
+    $color: $secondary-color;
+  }
+  @if $number == -2 {
+    $bg: $medium-light-bg;
+    $color: $secondary-color;
+  }
+  @if $number == -1 {
+    $bg: $small-light-bg;
+    $color: $primary-color;
+  }
+  @if $number == -1 {
+    $bg: $small-light-bg;
+    $color: $primary-color;
+  }
+  @if $number == 1 {
+    $bg: $small-dark-bg;
+    $color: $primary-color;
+  }
+  @if $number == 2 {
+    $bg: $medium-dark-bg;
+    $color: $primary-color;
+  }
+  @if $number == 3 {
+    $bg: $large-dark-bg;
+    $color: $primary-color;
+  }
+  @if $number == 4 {
+    $bg: $big-dark-bg;
+    $color: $primary-color;
+  }
+  @if $number == 5 {
+    $bg: $darkest-bg;
+    $color: $primary-color;
+  }
+  background-color: $bg;
+  color: $color;
+  @content;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bookman Std";
+}
